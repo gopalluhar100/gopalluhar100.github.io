@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="about-links">
                   <a className="button button-primary" href={profile.resume} download>Résumé PDF <span aria-hidden="true">↓</span></a>
                   <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
-                  <ExternalLink href={profile.github}>GitHub</ExternalLink>
+                  <ExternalLink href={profile.portfolio}>Portfolio</ExternalLink>
                 </div>
               </div>
               <ProfileCard />
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
             <div className="contact-bottom" data-reveal>
               <div><p className="micro-label">CONTACT</p><a href={`tel:${profile.phoneHref}`}>{profile.phone}</a><span>{profile.location}</span></div>
-              <div><p className="micro-label">ELSEWHERE</p><ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink><ExternalLink href={profile.github}>GitHub</ExternalLink><ExternalLink href={profile.portfolio}>Portfolio</ExternalLink></div>
+              <div><p className="micro-label">ELSEWHERE</p><ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink><ExternalLink href={profile.portfolio}>Portfolio</ExternalLink></div>
               <a className="button button-primary contact-resume" href={profile.resume} download>Download résumé <span aria-hidden="true">↓</span></a>
             </div>
           </div>

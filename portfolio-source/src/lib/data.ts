@@ -11,7 +11,6 @@ export const profile = {
   phone: "+91 9549610505",
   phoneHref: "+919549610505",
   linkedin: "https://www.linkedin.com/in/gopalluhar/",
-  github: "https://github.com/gopalluhar100",
   portfolio: "https://gopalluhar100.github.io/portfolio/",
   resume: publicPath("/resume/Gopal_Luhar_Resume_VA.pdf"),
   summary:
