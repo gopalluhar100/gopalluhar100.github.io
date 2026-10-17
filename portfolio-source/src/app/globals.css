@@ -50,10 +50,15 @@
 .skip-link:focus { transform: translateY(0); }
 .scroll-progress { position: fixed; inset: 0 auto auto 0; z-index: 60; width: 100%; height: 2px; background: var(--ink); transform: scaleX(var(--scroll-progress)); transform-origin: left; }
 .site-header { position: fixed; z-index: 50; top: 20px; left: 50%; transform: translateX(-50%); width: min(calc(100% - 2 * var(--gutter)), 1420px); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; min-width: max-content; }
+.brand { display: inline-flex; align-items: center; gap: 11px; min-width: 0; }
+.brand-home { display: inline-flex; align-items: center; min-width: max-content; }
 .brand-mark { width: 37px; height: 37px; border: 1px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-family: var(--font-jetbrains-mono), monospace; font-size: 10px; transition: color .3s, background .3s, transform .5s var(--ease); }
-.brand:hover .brand-mark { color: white; background: var(--ink); transform: rotate(12deg); }
+.brand-home:hover .brand-mark { color: white; background: var(--ink); transform: rotate(12deg); }
+.brand-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.brand-name-link { color: inherit; }
 .brand-name { font-size: 14px; font-weight: 600; }
+.brand-url { font: 7px var(--font-jetbrains-mono), monospace; color: var(--mute); white-space: nowrap; }
+.brand-url:hover { color: var(--ink); }
 .desktop-nav { display: flex; align-items: center; gap: 3px; padding: 5px; border: 1px solid rgba(13,13,13,.08); border-radius: 999px; background: rgba(255,255,255,.78); backdrop-filter: blur(16px); box-shadow: 0 8px 30px rgba(13,13,13,.04); }
 .nav-link { padding: 10px 14px; border-radius: 999px; color: var(--mute); font-size: 12px; transition: background .3s var(--ease), color .3s var(--ease); }
 .nav-link:hover, .nav-link.active { color: white; background: var(--ink); }
@@ -231,6 +236,8 @@
 }
 @media (max-width: 760px) {
   .site-header { top: 12px; }
+  .brand { gap: 8px; }
+  .brand-url { font-size: 6px; }
   .desktop-nav { display: none; }
   .menu-toggle { display: inline-flex; }
   .mobile-nav { display: block; position: fixed; z-index: 45; inset: 0; background: var(--paper); clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .7s var(--ease), visibility .7s; }

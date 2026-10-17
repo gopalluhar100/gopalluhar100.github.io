@@ -59,10 +59,15 @@ export function Navigation() {
     <>
       <div className="scroll-progress" aria-hidden="true" />
       <header className="site-header">
-        <a className="brand" href="#hero" onClick={closeMenu} aria-label="Gopal Luhar home">
-          <span className="brand-mark">GL</span>
-          <span className="brand-name">{profile.name}</span>
-        </a>
+        <div className="brand">
+          <a className="brand-home" href="#hero" onClick={closeMenu} aria-label="Gopal Luhar home">
+            <span className="brand-mark">GL</span>
+          </a>
+          <span className="brand-copy">
+            <a className="brand-name-link" href="#hero" onClick={closeMenu}><span className="brand-name">{profile.name}</span></a>
+            <a className="brand-url" href={profile.portfolio} aria-label="Portfolio website">https://gopalluhar100.github.io/portfolio/</a>
+          </span>
+        </div>
         <nav className="desktop-nav" aria-label="Main navigation">
           {navigation.map((item) => (
             <a
