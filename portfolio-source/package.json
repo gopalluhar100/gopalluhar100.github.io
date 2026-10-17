@@ -1,0 +1,29 @@
+{
+  "name": "gopal-luhar-video-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "assets": "node scripts/build-hero-assets.mjs",
+    "publish:pages": "node scripts/publish-to-pages.mjs"
+  },
+  "dependencies": {
+    "@fontsource/instrument-serif": "^5.2.8",
+    "@fontsource-variable/inter-tight": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "lenis": "^1.3.11",
+    "sharp": "^0.35.5",
+    "next": "15.x",
+    "react": "19.x",
+    "react-dom": "19.x",
+    "tailwindcss": "4.x",
+    "@tailwindcss/postcss": "4.x"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.7",
+    "typescript": "^5.8.3"
+  }
+}
