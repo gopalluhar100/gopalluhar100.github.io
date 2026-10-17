@@ -4,7 +4,12 @@ import path from "node:path";
 const projectRoot = process.cwd();
 const repoRoot = path.resolve(projectRoot, "..");
 const outputDir = path.resolve(projectRoot, "out");
-const publishDir = path.resolve(repoRoot, "video-portfolio");
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const publishFolder = basePath.replace(/^\/+|\/+$/g, "");
+if (!publishFolder || publishFolder.includes("..") || publishFolder.includes("\\")) {
+  throw new Error("Set NEXT_PUBLIC_BASE_PATH to a safe repository subpath, such as /portfolio.");
+}
+const publishDir = path.resolve(repoRoot, publishFolder);
 
 if (path.dirname(publishDir) !== repoRoot) {
   throw new Error("The GitHub Pages output path is outside the repository root.");

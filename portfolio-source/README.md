@@ -20,16 +20,16 @@ You can also use `pnpm install` and `pnpm dev`.
 
 ## Publish on GitHub Pages
 
-The project is published under `https://gopalluhar100.github.io/video-portfolio/` while the existing homepage stays at the domain root. In a clone of `gopalluhar100/gopalluhar100.github.io`, edit the files inside `portfolio-source/`, then run from that folder in PowerShell:
+The project is published under `https://gopalluhar100.github.io/portfolio/` while the existing homepage stays at the domain root. The previous `/video-portfolio/` address also remains available. In a clone of `gopalluhar100/gopalluhar100.github.io`, edit the files inside `portfolio-source/`, then run from that folder in PowerShell:
 
 ```powershell
-$env:NEXT_PUBLIC_BASE_PATH = "/video-portfolio"
+$env:NEXT_PUBLIC_BASE_PATH = "/portfolio"
 pnpm install --frozen-lockfile
 pnpm build
 pnpm publish:pages
 ```
 
-The publish command copies the static export to the sibling `video-portfolio/` folder. Commit and push both folders from the repository root; GitHub Pages republishes the update from the `main` branch.
+The publish command copies the static export to the sibling folder named by `NEXT_PUBLIC_BASE_PATH` (here, `portfolio/`). Commit and push both folders from the repository root; GitHub Pages republishes the update from the `main` branch.
 
 ## Build
 

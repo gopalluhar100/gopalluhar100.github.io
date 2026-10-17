@@ -12,7 +12,7 @@ export const profile = {
   phoneHref: "+919549610505",
   linkedin: "https://www.linkedin.com/in/gopalluhar/",
   github: "https://github.com/gopalluhar100",
-  portfolio: "https://gopalluhar100.github.io/video-portfolio/",
+  portfolio: "https://gopalluhar100.github.io/portfolio/",
   resume: publicPath("/resume/Gopal_Luhar_Resume_VA.pdf"),
   summary:
     "Lead generation and data research professional with 5+ years of experience supporting US and UK clients. Skilled in prospect and decision-maker research, business email and phone research, data mining, data preprocessing, CRM enrichment, list building, quality assurance, and remote operations support. Experienced in converting client requirements into accurate datasets, reliable workflows, and sales-ready deliverables.",
